@@ -1,0 +1,209 @@
+
+$border-color: #202020;
+$button-background: #bfb1b1;
+$button-color: white;
+// media breakpoints
+$tablet: 760px;
+$desktop: 992px;
+
+.container{
+    padding: 10px 20px;
+}
+
+.hide-mobile{
+    @media only screen and(max-width: $tablet){
+        display: none;
+    }
+}
+// styling for fitlers
+.list-fitlters{
+    display: flex;
+    justify-content: space-evenly;
+
+    > div{
+        margin-bottom: 5px;
+    }
+
+    &__label{
+        font-size: 1rem;
+        @media only screen and(min-width: $desktop){
+            display: block;
+            font-size: 1.2rem;
+        }
+    }
+    select{
+        margin: 5px 0;
+    }
+}
+
+
+.bordered-box{
+    border: 1px solid $border-color;
+    padding: 0 10px;
+}
+
+.item-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bordered-box-list{
+    border: 1px solid $border-color;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin: 10px 0;
+    display: flex;
+
+    .list-item__index{
+      width: 5%;
+      padding: 5px 2px;
+    //   border-right: 1px solid $border-color;
+    }
+
+    .list-item__body{
+        width: 95%;
+        padding: 10px 0;
+        display: flex;
+        height: 70px;
+
+        @media only screen and(min-width: $tablet){
+            height: auto;
+        }
+    }
+    .list-name{
+        width: 30%
+    }
+
+    .list-specs{
+        width: 30%;
+
+        &__download{
+
+            @media only screen and(min-width: $tablet){
+                margin-bottom: 10px;
+            }
+
+            &__trend{
+
+                @media only screen and(min-width: $tablet){
+                    border: 1px solid $border-color;
+                    border-radius: 0 20px 19px 0;
+                    max-width: 60%;
+                }
+            }
+
+            h3{
+                display: none;
+
+                @media only screen and(min-width: $desktop){
+                    display: block;
+                }
+            }
+            span{
+                display: block;
+
+                @media only screen and(min-width: $tablet){
+                    display: inline;
+                }
+            }
+            .download__image{
+                max-width: 20px;
+                transform: rotate(180deg);
+                vertical-align: middle;
+
+                @media only screen and(min-width: $tablet){
+                    border: 1px solid $border-color;
+                }
+            }
+        }
+
+        &__upload{
+            display: none;
+
+            @media only screen and(min-width: $tablet){
+                display: inline;
+            }
+
+
+            &__trend{
+                border: 1px solid $border-color;
+                border-radius: 0 20px 19px 0;
+                max-width: 60%;
+            }
+
+            h3{
+                display: none;
+
+                @media only screen and(min-width: $desktop){
+                    display: block;
+                }
+            }
+
+            .upload__image{
+                max-width: 20px;
+                vertical-align: middle;
+
+                @media only screen and(min-width: $tablet){
+                    border: 1px solid $border-color;
+                }
+            }
+        }
+    }
+
+    .list-features{
+        width: 30%;
+        
+        @media only screen and(min-width: $desktop){
+            display: block;
+        }
+    }
+
+    .list-details{
+        width: 38%;
+        justify-content: flex-end;
+        display: flex;
+
+            @media only screen and(min-width: $tablet){
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        &__currency{
+            width: 100%;
+            padding-bottom: 10px;
+            font-weight: bold;
+
+            @media only screen and(min-width: $tablet){
+                width: auto;
+                text-align: right;
+            }
+        }
+
+        &__button{
+            border: 1px solid $border-color;
+            width: 20%;
+            padding: 0;
+            font-size: 1rem;
+            background: $button-background;
+            color: $button-color;
+
+            @media only screen and(min-width: $tablet){
+                width: auto;
+                padding: 5px 10px;
+            }
+
+            > span {
+                display: none;
+
+                @media only screen and(min-width: $tablet){
+                    padding: 5px 20px;
+                    display: inline;
+                }
+
+            }
+        }
+    }
+}
+
+
